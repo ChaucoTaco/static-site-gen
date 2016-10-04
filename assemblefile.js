@@ -1,14 +1,12 @@
 'use strict';
 var assemble = require('assemble');
-var htmlmin = require('gulp-htmlmin');
+var babel = require('gulp-babel');
 var extname = require('gulp-extname');
-
+var htmlmin = require('gulp-htmlmin');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
-
-const babel = require('gulp-babel');
-
 var watch = require( 'base-watch' );
+var webserver = require('gulp-webserver');
 
 var app = assemble();
 app.use(watch());
@@ -45,6 +43,13 @@ app.task('watch', function() {
   app.watch('src/assets/**', ['assets']);
   app.watch('src/styles/**/*.css', ['styles']);
   app.watch('src/scripts/**', ['scripts']);
+
+  app.src('./dist')
+    .pipe(webserver({
+      livereload: true,
+      fallback: 'index.html',
+      open: true
+    }))
 });
 
 app.task('build', ['templates', 'assets', 'styles', 'scripts']);

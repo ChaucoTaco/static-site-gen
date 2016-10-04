@@ -17,6 +17,7 @@
     "gulp-extname": "^0.2.2",
     "gulp-htmlmin": "^3.0.0",
     "gulp-postcss": "^6.2.0",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-webserver": "^0.9.1"
   }
 }
