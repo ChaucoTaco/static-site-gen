@@ -13,7 +13,8 @@ var app = assemble();
 app.use(watch());
 
 app.task('templates', function() {
-  app.pages('src/templates/*.hbs');
+  app.pages('src/templates/layout/*.hbs');
+  app.partials('src/templates/partials/*.hbs');
   return app.toStream('pages')
     .pipe(app.renderFile(data))
     .pipe(htmlmin())
@@ -40,7 +41,7 @@ app.task('scripts', function() {
 });
 
 app.task('watch', function() {
-  app.watch('src/templates/*.hbs', ['templates']);
+  app.watch('src/templates/**', ['templates']);
   app.watch('src/assets/**', ['assets']);
   app.watch('src/styles/**/*.css', ['styles']);
   app.watch('src/scripts/**', ['scripts']);
