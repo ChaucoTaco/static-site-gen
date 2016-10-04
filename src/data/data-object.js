@@ -1,4 +1,6 @@
 module.exports = {
-  title: 'Tadsa',
-  header: 'Heasda'
+  home: {
+    title: 'Tester Tester',
+    header: 'Test Title Hello'
+  }
 }

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "assemble build",
-    "watch": "assemble watch"
+    "watch": "assemble watch",
+    "data": "assemble templates"
   },
   "author": "Chau Nguyen",
   "license": "ISC",
