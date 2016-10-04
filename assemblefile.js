@@ -30,7 +30,7 @@ app.task('styles', function() {
     .pipe(sourcemaps.init())
     .pipe(postcss([ require('postcss-cssnext'), require('precss') ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(app.dest('dist/css'));
+    .pipe(app.dest('dist/styles'));
 });
 
 app.task('scripts', function() {
