@@ -1,0 +1,22 @@
+{
+  "name": "static-gen",
+  "version": "0.0.1",
+  "description": "Static Template Generator using Assemble",
+  "main": "index.js",
+  "scripts": {
+    "build": "assemble build",
+    "watch": "assemble watch"
+  },
+  "author": "Chau Nguyen",
+  "license": "ISC",
+  "devDependencies": {
+    "assemble": "^0.17.1",
+    "babel-preset-es2015": "^6.16.0",
+    "base-watch": "^0.1.3",
+    "gulp-babel": "^6.1.2",
+    "gulp-extname": "^0.2.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}
