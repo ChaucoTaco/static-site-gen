@@ -7,6 +7,7 @@ var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var watch = require( 'base-watch' );
 var webserver = require('gulp-webserver');
+var data = require('./src/data/data-object.js');
 
 var app = assemble();
 app.use(watch());
@@ -14,7 +15,7 @@ app.use(watch());
 app.task('templates', function() {
   app.pages('src/templates/*.hbs');
   return app.toStream('pages')
-    .pipe(app.renderFile())
+    .pipe(app.renderFile(data))
     .pipe(htmlmin())
     .pipe(extname())
     .pipe(app.dest('dist'));
