@@ -55,5 +55,6 @@ app.task('watch', function() {
 });
 
 app.task('build', ['templates', 'assets', 'styles', 'scripts']);
+app.task('server', ['build', 'watch']);
 
 module.exports = app;

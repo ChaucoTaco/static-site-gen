@@ -6,7 +6,8 @@
   "scripts": {
     "build": "assemble build",
     "watch": "assemble watch",
-    "data": "assemble templates"
+    "data": "assemble templates",
+    "server": "assemble server"
   },
   "author": "Chau Nguyen",
   "license": "ISC",
@@ -19,6 +20,8 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-postcss": "^6.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "postcss-cssnext": "^2.8.0",
+    "precss": "^1.4.0"
   }
 }
